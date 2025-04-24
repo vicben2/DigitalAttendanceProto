@@ -14,7 +14,7 @@ studAddBtn.addEventListener("click", function(e) {
 
     if(lname.value && fname.value) {
         studAddedList.innerHTML += `<div class="flex">${lname.value}, ${fname.value} <button>Edit</button><button>Remove</button></div>`
-        tempStudList.push(`${lname.value}, ${fname.value}`)
+        tempStudList.push({"name": `${lname.value}, ${fname.value}`, "points": 0})
         lname.value = ""
         fname.value = ""
     }
@@ -28,7 +28,7 @@ newClassBtn.addEventListener("click", function(e) {
 
     const subject = document.getElementById('subject').value;
     const schedule = document.getElementById('schedule').value;
-    loggedIn["listClasses"].push({ subject, schedule, "studentList": tempStudList })
+    loggedIn["listClasses"].push({ subject, schedule, "studentList": tempStudList, "days": 1 })
 
     let users = JSON.parse(sessionStorage.getItem("users"))
     users = users.map(user => {
