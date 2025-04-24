@@ -5,7 +5,7 @@ const studAddedList = document.getElementById("studAddedList")
 const newClassBtn = document.getElementById("newClassBtn")
 let tempStudList = []
 
-
+//when clicking add student button
 studAddBtn.addEventListener("click", function(e) {
     e.preventDefault()
 
@@ -14,7 +14,7 @@ studAddBtn.addEventListener("click", function(e) {
 
     if(lname.value && fname.value) {
         studAddedList.innerHTML += `<div class="flex">${lname.value}, ${fname.value} <button>Edit</button><button>Remove</button></div>`
-        tempStudList.push({"name": `${lname.value}, ${fname.value}`, "points": 0})
+        tempStudList.push({"name": `${lname.value}, ${fname.value}`, "attendance": []})
         lname.value = ""
         fname.value = ""
     }
@@ -23,6 +23,7 @@ studAddBtn.addEventListener("click", function(e) {
     }
 })
 
+//when clicking add new class button
 newClassBtn.addEventListener("click", function(e) {
     e.preventDefault
 
