@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new class</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./addnewclass.js" defer></script>
+</head>
+<body>
+    <h1>Add New Class</h1>
+
+    <div class="fgrid">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="021792 - Technopreneurship">
+        <label for="schedule">Schedule:</label>
+        <input type="text" id="schedule" name="schedule" placeholder="MWF 1:30 pm - 3:30 pm">
+        <div>Students:</div>
+            <div id="studAddedList" class="flexdown">
+            </div>
+        <div class="studform">
+            <label for="studlname">LastName:</label><input type="text" id="studlname" name="studlname">
+            <label for="studfname">FirstName:</label><input type="text" id="studfname" name="studfname">
+            <button id="studAddBtn">Add</button>
+        </div>
+        <hr>
+        <button id="newClassBtn">Add new class</button>
+    </div>
+
+</body>
+</html>

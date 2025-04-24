@@ -1,0 +1,30 @@
+.fgrid {
+    display: grid;
+    max-width: 500px;
+    gap: 5px;
+}
+
+.studform {
+    display: flex;
+    max-width: 500px;
+    gap: 5px
+}
+
+.flexdown {
+    display: flex; flex-direction: column; gap: 5px
+}
+
+.flex {
+    display: flex; gap: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are collapsed into a single border */
+}
+
+th, td {
+    border: 2px solid black; /* Sets a solid black border */
+    padding: 10px; /* Adds padding for better spacing */
+    text-align: left; /* Aligns text to the left */
+}
