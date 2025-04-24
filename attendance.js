@@ -35,6 +35,11 @@ function genTable() {
         return radios
     }
 
+    currentClassStudents.sort((a, b) => {
+        if(a.name < b.name) return -1
+        if(a.name > b.name) return 1
+        return 0
+    })
     let html = currentClassStudents.map((stud) => `<tr><td>${stud["name"]}</td>${radios(stud)}</tr>`).join('')
     const studListCont = document.getElementById("studNames")
     studListCont.innerHTML = html
